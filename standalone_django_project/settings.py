@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'standalone_django_project',  # For the template finder
 
     'apihangar',
+    'actionkit',
 ]
 
 for p in plugins:
