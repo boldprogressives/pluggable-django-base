@@ -1,0 +1,17 @@
+celery
+chardet
+djangohelpers
+
+django-dbtemplates
+dj-database-url
+
+Django
+south
+django-debug-toolbar
+gunicorn
+django-supervisor
+psycopg2
+mysql-python
+
+django-apihangar
+django-actionkit-client
