@@ -24,6 +24,7 @@ if __name__ == '__main__':
     vars['DJANGO_SECRET'] = ''.join([random.choice('abcdefghijklmnopqrxtuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-=_+') for i in range(30)])
 
     vars['SITE_NAME'] = raw_input("What is your organization's name? ")
+    vars['SITE_DOMAIN'] = raw_input("Enter the full domain that you will be installing this application at (e.g. http://apps.example.com) ")
     vars['ACTIONKIT_API_HOST'] = raw_input("Enter the base URL of your Actionkit instance (e.g. https://act.example.com) ")
     vars['ACTIONKIT_API_USER'] = raw_input("Enter the username of an Actionkit user with API access: ")
     vars['ACTIONKIT_API_PASSWORD'] = raw_input("What is the password for that user? ")
