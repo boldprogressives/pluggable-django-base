@@ -150,7 +150,7 @@ STATICFILES_FINDERS = (
 )
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'collected_static')
 
-APIHANGAR_DATABASES = os.environ.get("APIHANGAR_DATABASES")
+APIHANGAR_DATABASES = os.environ.get("APIHANGAR_DATABASES") or ""
 APIHANGAR_DATABASES = [d.strip() for d in APIHANGAR_DATABASES.split()
                        if d.strip() in DATABASES]
 
