@@ -70,7 +70,7 @@ for p in plugins:
     if apps:
         INSTALLED_APPS.extend(apps)
 
-TEMPLATE_CONTEXT_PROCESSORS = (
+TEMPLATE_CONTEXT_PROCESSORS = [
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.request",
@@ -80,12 +80,12 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
     "standalone_django_project.context_processors.globals",
-)
+    ]
 
 for p in plugins:
     ctx = getattr(p, 'CONTEXT_PROCESSORS', None)
     if ctx:
-        CONTEXT_PROCESSORS.extend(ctx)
+        TEMPLATE_CONTEXT_PROCESSORS.extend(ctx)
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
